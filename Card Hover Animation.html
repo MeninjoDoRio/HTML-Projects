@@ -1,0 +1,145 @@
+<style>
+    * {
+        box-sizing: border-box;
+        margin: unset;
+        padding: unset;
+        color: inherit;
+    }
+
+    html {
+        font-family: monospace;
+        font-size: max(5vmin, 16px);
+    }
+
+    body {
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+        background-color: hsl(240deg, 10%, 10%);
+        color: hsl(240deg, 10%, 90%);
+    }
+
+    body:hover .hand {
+        grid-template-columns: repeat(5, 16vmin);
+        gap: 2vmin;
+    }
+
+body:hover .card:hover {
+    transform: rotate(calc((var(--i) * 15deg) - 30deg)) translateY(-20%);
+    transform-origin: 50% 100%;
+    z-index: 10;
+}
+
+    .hand {
+        display: inline-grid;
+        grid-template-columns: repeat(5, 0);
+        gap: 0;
+        transition: 200ms ease-in-out;
+    }
+
+    .card {
+        position: relative;
+        height: 20vmin;
+        width: 16vmin;
+        transform: rotate(calc((var(--i) * 15deg) - 30deg)) translateY(0);
+        transform-origin: 50% 100%;
+        border-radius: 1vmin;
+        border: 1px solid currentColor;
+        background-color: white;
+        transition: transform 200ms ease-in-out;
+        overflow: hidden;
+    }
+
+    .card span.name {
+        position: absolute;
+        top: 0.5vmin;
+        left: 0.7vmin;
+        font-size: 2vmin;
+        line-height: 1;
+        color: black;
+    }
+
+    .card span.symbol {
+        position: absolute;
+        bottom: 0.5vmin;
+        right: 0.7vmin;
+        font-size: 2.5vmin;
+        line-height: 1;
+    }
+
+    .card span.center-symbol {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 8vmin;
+        opacity: 1;
+        pointer-events: none;
+    }
+
+    /* Hide center-symbol for the Two card */
+    .card.two span.center-symbol {
+        display: none;
+    }
+
+    /* Two symbols vertical stack in the center */
+    .center-symbols.two {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 10vmin;
+        font-size: 3.5vmin;
+        pointer-events: none;
+        color: #b22222;
+    }
+
+    .center-symbols.two span {
+        display: block;
+        line-height: 1;
+    }
+
+    .red {
+        color: #b22222;
+    }
+
+    .black {
+        color: #222222;
+    }
+</style>
+
+<div class="hand">
+    <div class="card" style="--i: 0;">
+        <span class="name">King</span>
+        <span class="symbol black">♠</span>
+        <span class="center-symbol black">♠</span>
+    </div>
+    <div class="card" style="--i: 1;">
+        <span class="name">Queen</span>
+        <span class="symbol red">♥</span>
+        <span class="center-symbol red">♥</span>
+    </div>
+    <div class="card" style="--i: 2;">
+        <span class="name">Jack</span>
+        <span class="symbol black">♣</span>
+        <span class="center-symbol black">♣</span>
+    </div>
+    <div class="card two" style="--i: 3;">
+        <span class="name">Two</span>
+        <span class="symbol red">♦</span>
+        <span class="center-symbol red">♦</span> <!-- hidden by CSS -->
+        <div class="center-symbols two red">
+            <span>♦</span>
+            <span>♦</span>
+        </div>
+    </div>
+    <div class="card" style="--i: 4;">
+        <span class="name">Ace</span>
+        <span class="symbol black">♠</span>
+        <span class="center-symbol black">♠</span>
+    </div>
+</div>

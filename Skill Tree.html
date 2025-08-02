@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>My Skills</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #000;
+            color: #fff;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 40%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px 10px;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        th {
+            width: 80px;
+        }
+
+        .bar-container {
+            width: 100%;
+            background-color: #333;
+            border-radius: 4px;
+            height: 20px;
+            position: relative;
+        }
+
+        .bar {
+            height: 100%;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .bar span {
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 12px;
+            color: white; /* Jetzt weiß */
+            font-weight: bold;
+        }
+
+        .csharp-bar {
+            width: 70%;
+            background-color: red;
+        }
+
+        .html-bar {
+            width: 30%;
+            background-color: green;
+        }
+
+        .python-bar {
+            width: 30%;
+            background-color: blue;
+        }
+
+        .csharp-text {
+            color: red;
+        }
+
+        .html-text {
+            color: green;
+        }
+
+        .python-text {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Malte Haller</h2>
+<h1>My Skills</h1>
+
+<table>
+    <tr>
+        <th>Skill</th>
+        <th>Level</th>
+    </tr>
+    <tr>
+        <td class="csharp-text">C#</td>
+        <td>
+            <div class="bar-container">
+                <div class="bar csharp-bar"><span>70%</span></div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="html-text">HTML</td>
+        <td>
+            <div class="bar-container">
+                <div class="bar html-bar"><span>30%</span></div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="python-text">Python</td>
+        <td>
+            <div class="bar-container">
+                <div class="bar python-bar"><span>30%</span></div>
+            </div>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
