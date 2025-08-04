@@ -1,0 +1,144 @@
+<style>
+html{
+    background-color: black;
+}
+.container-loader {
+    width: 130px;
+    height: 130px;
+    position: relative;
+    left: 700px;
+    top: 250px;
+
+    @media (width <=1111px) {
+        zoom: 0.55,
+    }
+
+    .aro {
+      width: 100%;
+      height: 100%;
+      border: 3px solid currentColor;
+      position: absolute;
+      top: 0;
+      border-radius: 50%;
+      transition: filter 0.5s ease;
+      animation: mover 4s alternate infinite both;
+      animation-delay: calc(var(--d) * -0.04s);
+
+      &:nth-child(n + 1):nth-child(-n + 5) {
+        color: #ff5733;
+      }
+
+      &:nth-child(n + 6):nth-child(-n + 10) {
+        color: #33ff57;
+      }
+
+      &:nth-child(n + 11):nth-child(-n + 15) {
+        color: #3357ff;
+      }
+
+      &:nth-child(n + 16):nth-child(-n + 20) {
+        color: #9d80cb;
+      }
+
+       &:nth-child(n + 21):nth-child(-n + 25) {
+        color: #33fff5;
+      }
+
+       &:nth-child(n + 26):nth-child(-n + 30) {
+        color: #f5ff33;
+      }
+
+        &:nth-child(n + 31):nth-child(-n + 35) {
+        color: #ff8c33;
+      }
+
+        &:nth-child(n + 36):nth-child(-n + 40) {
+        color: #8c33ff;
+      }
+
+        &:nth-child(n + 41):nth-child(-n + 45) {
+        color: #33ff8c;
+      }
+
+        &:nth-child(n + 46):nth-child(-n + 50) {
+        color: #ff3380;
+      }
+    }
+
+    &:hover {
+        .aro {
+            filter: saturate(500%);
+            color: white;
+        }
+    }
+}
+
+@keyframes mover {
+    0%,
+    100% {
+      left: -150%;
+      top: -150%;
+    }
+    25% {
+        left: 150%;
+    }  
+    50% {
+        top: 50%;
+    }
+    75% {
+        left: -150%;
+    }
+}
+
+</style>
+<aside class="container-loader">
+    <article class="aro" style="--d:1"></article>
+    <article class="aro" style="--d:2"></article>
+    <article class="aro" style="--d:3"></article>
+    <article class="aro" style="--d:4"></article>
+    <article class="aro" style="--d:5"></article>
+    <article class="aro" style="--d:6"></article>
+    <article class="aro" style="--d:7"></article>
+    <article class="aro" style="--d:8"></article>
+    <article class="aro" style="--d:9"></article>
+    <article class="aro" style="--d:10"></article>
+    <article class="aro" style="--d:11"></article>
+    <article class="aro" style="--d:12"></article>
+    <article class="aro" style="--d:13"></article>
+    <article class="aro" style="--d:14"></article>
+    <article class="aro" style="--d:15"></article>
+    <article class="aro" style="--d:16"></article>
+    <article class="aro" style="--d:17"></article>
+    <article class="aro" style="--d:18"></article>
+    <article class="aro" style="--d:19"></article>
+    <article class="aro" style="--d:20"></article>
+    <article class="aro" style="--d:21"></article>
+    <article class="aro" style="--d:22"></article>
+    <article class="aro" style="--d:23"></article>
+    <article class="aro" style="--d:24"></article>
+    <article class="aro" style="--d:25"></article>
+    <article class="aro" style="--d:26"></article>
+    <article class="aro" style="--d:27"></article>
+    <article class="aro" style="--d:28"></article>
+    <article class="aro" style="--d:29"></article>
+    <article class="aro" style="--d:30"></article>
+    <article class="aro" style="--d:31"></article>
+    <article class="aro" style="--d:32"></article>
+    <article class="aro" style="--d:33"></article>
+    <article class="aro" style="--d:34"></article>
+    <article class="aro" style="--d:35"></article>
+    <article class="aro" style="--d:36"></article>
+    <article class="aro" style="--d:37"></article>
+    <article class="aro" style="--d:38"></article>
+    <article class="aro" style="--d:39"></article>
+    <article class="aro" style="--d:40"></article>
+    <article class="aro" style="--d:41"></article>
+    <article class="aro" style="--d:42"></article>
+    <article class="aro" style="--d:43"></article>
+    <article class="aro" style="--d:44"></article>
+    <article class="aro" style="--d:45"></article>
+    <article class="aro" style="--d:46"></article>
+    <article class="aro" style="--d:47"></article>
+    <article class="aro" style="--d:48"></article>
+    <article class="aro" style="--d:49"></article>
+    <article class="aro" style="--d:50"></article>
